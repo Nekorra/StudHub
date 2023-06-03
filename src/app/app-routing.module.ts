@@ -11,6 +11,34 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'teachers-login',
+    loadChildren: () => import('./teachers-login/teachers-login.module').then( m => m.TeachersLoginPageModule)
+  },
+  {
+    path: 'students-login',
+    loadChildren: () => import('./students-login/students-login.module').then( m => m.StudentsLoginPageModule)
+  },
+  {
+    path: 'teacher-dashboard',
+    loadChildren: () => import('./teacher-dashboard/teacher-dashboard.module').then( m => m.TeacherDashboardPageModule)
+  },
+  {
+    path: 'course-teacher-dashboard',
+    loadChildren: () => import('./course-teacher-dashboard/course-teacher-dashboard.module').then( m => m.CourseTeacherDashboardPageModule)
+  },
+  {
+    path: 'student-dashboard',
+    loadChildren: () => import('./student-dashboard/student-dashboard.module').then( m => m.StudentDashboardPageModule)
+  },
+  {
+    path: 'course-student-dashboard',
+    loadChildren: () => import('./course-student-dashboard/course-student-dashboard.module').then( m => m.CourseStudentDashboardPageModule)
+  },
+  {
+    path: 'chatbot',
+    loadChildren: () => import('./chatbot/chatbot.module').then( m => m.ChatbotPageModule)
+  },
 ];
 
 @NgModule({

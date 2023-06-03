@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{this.courseData.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" >{{this.courseData.name}}</ion-title>
+    </ion-toolbar>  
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let note of notes; let ind = index">
+      <a href="{{note.file}}" target="_blank">Open: {{note.fileName}}</a>
+      <ion-button (click)="getData(note.file)">Open Virtual teacher</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
